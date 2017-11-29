@@ -14,8 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-
-
+    
   </head>
     <body>
       <!-- Optional JavaScript -->
@@ -39,50 +38,51 @@
          </div>
     </div>
       <div class="container">
-          <form method="POST" action="envio.php">
+          <form method="POST" action="envio.php" enctype="multipart/data-form"> 
             <fieldset>
               <legend style="text-align: left;font-size: 30px"> Requerimento - Aluno(a) </legend>
-              <div class="form-group">
                 <table class="table table-sm ">
                       <thead >
                           <tr >
                             <th scope="col">Campus</th>
                             <th scope="col">Nome do(a) aluno(a)</th>
+                            <th></th>
                             <th scope="col">Matrícula</th>
                           </tr>
                       </thead>
                       <tbody>
                           <tr>
                               <td> <label> <input class="form-control" type="text" name="campus"> </label> </td> 
-                              <td> <label> <input class="form-control" type="text" name="nome"> </label> </td>
+                              <td>  <input class="form-control" type="text"  name="nome">  </td>
+                              <td></td>
                               <td> <label> <input class="form-control" type="text" name="matricula" required> </label> </td>
                           </tr>
                       </tbody>
                           <!-- -------------------- ---------------------- ------------------------ -->
                       <thead>
                           <tr>
-                            <th scope="col">Periodo</th>
+                            <th scope="col" >Periodo</th>
                             <th scope="col">Curso</th>
+                            <th></th>
                             <th scope="col">Turno</th>
-                            <th scope="col">Telefone</th>
                           </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td> <label> <input class="form-control" type="number" min="1" max="4" name="periodo"> </label> </td>
                           <td> <label> <select class="form-control" name="curso"> 
-                              <option disabled selected> -- </option> 
+                              <option disabled selected> ------ </option> 
                               <option value="ipi"> Informatica para Internet</option>
                               <option value="log"> Logistica</option>
                             </select></label>
                           </td>
+                          <td></td>
                           <td> <label> <select  class="form-control" name="turno">
-                               <option disabled selected>----</option> 
+                               <option disabled selected> ---- </option> 
                                <option value="Manha">Manhã</option> 
                                <option value="tarde">Tarde</option>
                               </select></label>
                           </td>
-                          <td> <label> <input class="form-control" id="tel" type="text" name="fone"> </label> </td>
                         </tr>
                       </tbody>
                       <!-- ----------------- ---------------------- ---------------- ------------------ -->
@@ -90,6 +90,7 @@
                         <tr>
                           <th scope="col">CPF</th>
                           <th scope="col">Identidade</th>
+                          <th scope="col">Telefone</th>
                           <th scope="col">Email</th>
                         </tr>
                       </thead>
@@ -98,6 +99,7 @@
 
                           <td> <label> <input  class="form-control" type="text" name="cpf" id="cpf" required> </label> </td>
                           <td><label> <input  class="form-control" type="text" name="rg" id="rg" required></label> </td>
+                          <td> <label> <input class="form-control" id="tel" type="text" name="fone"> </label> </td>
                           <td> <label> <input  class="form-control" type="text" name="email"></label> </td>
                         </tr>
                       </tbody>
@@ -105,7 +107,9 @@
                       <thead>
                         <tr>
                           <th scope="col">Itens</th>
-                          <th scope="col"> Outros</th>
+                          <th></th>
+                          <th scope="col">Observações</th>
+                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -118,26 +122,28 @@
                                <option value="historico">Histórico Escolar</option>
                                <option value="falta">Justificativa de Falta</option>
                                <option value="reabertura">Reabertura de Matrícula</option>
-                               <option value="trancamento">trancamento de Matrícula</option>
+                               <option value="trancamento">Trancamento de Matrícula</option>
                               </select></label>
                           </td>
+                          <td></td>
                           <td>
-                            <label> <textarea class="form-control" rows="3" name="outros"></textarea></label>
+                           <label> <textarea class="form-control" rows="5" name="obs" width="300px"></textarea> </label></td>
                           </td>
-                           </td>
                         </tr>
                       </tbody>
                       <!-- ------------------------ ----------------------- ----------------- --------------------- -->
-                      <thead>
                           <tr>
-                            <th scope="col">Observações</th>
+                      <thead>
+                          <th scope="col"> Outros</th>
                             <th scope=""> Anexo de arquivos</th>
+                            <th></th>
+                            <th></th>
                           </tr> 
                       </thead>
                       <tbody>
                         <tr>
                           <td>
-                           <label> <textarea class="form-control" rows="5" name="obs"></textarea> </label></td>
+                            <label> <textarea class="form-control" rows="3" name="outros"></textarea></label>
                           <td> <label> <input type="file" class="form-control-file" name="file"></label></td>
                         </tr>
                       </tbody>
@@ -148,15 +154,10 @@
             </fieldset>
           </form>
         </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script type="text/javascript" src="jquery.mask.min.js"></script>
     
-    <script type="text/javascript">
-      $(document).ready(function (){
-        var $Tel = $('#tel');
-        $Tel.mask('(00) 0000-0000');
-      });
-    </script>
+    <script type="text/javascript" src=" mask.js">  </script>
       </body>
 </html>
