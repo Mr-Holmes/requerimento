@@ -1,0 +1,61 @@
+    
+/* plano de fundo*/
+body {
+  background: #E8E8E8 url("3.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*tabela de formulario*/
+table {
+  /* background-color: #eeeeee; */
+}
+table thead {
+  background-color: #19882c;
+}
+table thead th {
+  color: #fff;
+}
+table a i {
+  text-decoration: none;
+  color: #989BA2;
+}
+
+.btn {
+  background-color: #19882c;
+}
+
+.btn {
+  color: inherit;
+}
+
+.btn-secundary {
+  -webkit-background-size: 200% 200%;
+  background-size: 200%;
+  background-position: 50%;
+  color: #fff;
+  background-color: #768185;
+}
+
+.btn-secundary:hover, .btn-secundary:active:hover, .btn-secundary:focus {
+  background-color: #484D4F;
+  color: #fff;
+}
+  /*hearder*/
+ #hearder {
+    min-width: 990px;
+    width: 100%;
+    height: 6em;
+    margin: 0 auto;
+    padding: 0.414em 0px;
+    background-color: #19882c;
+    display: block;
+    }
+    .table .table-sm{
+  color:#aaa;
+  font-size:12px;
