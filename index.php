@@ -41,80 +41,67 @@
           <form method="POST" action="envio.php" enctype="multipart/data-form"> 
             <fieldset>
               <legend style="text-align: left;font-size: 30px"> Requerimento - Aluno(a) </legend>
-                <table class="table table-sm ">
-                      <thead >
-                          <tr >
-                            <th scope="col">Campus</th>
-                            <th scope="col">Nome do(a) aluno(a)</th>
-                            <th></th>
-                            <th scope="col">Matrícula</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                              <td> <label> <input class="form-control" type="text" name="campus"> </label> </td> 
-                              <td>  <input class="form-control" type="text"  name="nome">  </td>
-                              <td></td>
-                              <td> <label> <input class="form-control" type="text" name="matricula" required> </label> </td>
-                          </tr>
-                      </tbody>
-                          <!-- -------------------- ---------------------- ------------------------ -->
-                      <thead>
-                          <tr>
-                            <th scope="col" >Periodo</th>
-                            <th scope="col">Curso</th>
-                            <th></th>
-                            <th scope="col">Turno</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td> <label> <input class="form-control" type="number" min="1" max="4" name="periodo"> </label> </td>
-                          <td> <label> <select class="form-control" name="curso"> 
+                <div class="form-row">
+                  <div class="col">
+                    <label> Campus </label> <br>
+                   <label><input type="text" name="campus" class="form-control" placeholder="Campus"></label>
+                  </div>
+                  <div class="col-md-7">
+                    <label> Nome do(a) Aluno(a)</label>
+                    <input type="text"  name="nome" class="form-control" placeholder="nome" required>
+                  </div>
+                  <div class="col-md-3">
+                    <label> Matrícula</label><br>
+                   <label><input class="form-control" type="text" name="matricula" required></label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label>Periodo</label><br>
+                    <label> <input class="form-control" type="number" min="1" max="4" name="periodo"> </label>
+                  </div>
+                  <div class="col">
+                    <label>Curso</label><br>
+                    <label><select class="form-control" name="curso"> 
                               <option disabled selected> ------ </option> 
                               <option value="ipi"> Informatica para Internet</option>
                               <option value="log"> Logistica</option>
                             </select></label>
-                          </td>
-                          <td></td>
-                          <td> <label> <select  class="form-control" name="turno">
+                  </div>
+                  <div class="col">
+                    <label>Turno</label><br>
+                    <label><select  class="form-control" name="turno">
                                <option disabled selected> ---- </option> 
                                <option value="Manha">Manhã</option> 
                                <option value="tarde">Tarde</option>
                               </select></label>
-                          </td>
-                        </tr>
-                      </tbody>
-                      <!-- ----------------- ---------------------- ---------------- ------------------ -->
-                      <thead> 
-                        <tr>
-                          <th scope="col">CPF</th>
-                          <th scope="col">Identidade</th>
-                          <th scope="col">Telefone</th>
-                          <th scope="col">Email</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
+                  </div>
+                </div>
 
-                          <td> <label> <input  class="form-control" type="text" name="cpf" id="cpf" required> </label> </td>
-                          <td><label> <input  class="form-control" type="text" name="rg" id="rg" required></label> </td>
-                          <td> <label> <input class="form-control" id="tel" type="text" name="fone"> </label> </td>
-                          <td> <label> <input  class="form-control" type="text" name="email"></label> </td>
-                        </tr>
-                      </tbody>
-                      <!-- ------------------- ---------------------- ------------------------ ------------------ -->
-                      <thead>
-                        <tr>
-                          <th scope="col">Itens</th>
-                          <th></th>
-                          <th scope="col">Observações</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                         <td> <label> <select  class="form-control" name="itens">
+                <div class="form-row">
+                  <div class="col">
+                    <label>CPF</label><br>
+                    <label><input  class="form-control" type="text" name="cpf" id="cpf" required></label>
+                  </div>
+                  <div class="col">
+                    <label>Identidade</label><br>
+                    <label><input  class="form-control" type="text" name="rg" id="rg" required></label>
+                  </div>
+                  <div class="col">
+                    <label>Telefone</label><br>
+                    <label><input class="form-control" id="tel" type="text" name="fone"></label>
+                  </div>
+                  <div class="col">
+                    <label>E-mail</label><br>
+                    <label><input  class="form-control" type="text" name="email"></label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label>Itens</label><br>
+                    <label> <select  class="form-control" name="itens">
                                <option disabled selected>----</option> 
                                <option value="cancelamento">Cancelamento de Matrícula</option> 
                                <option value="declaracao">Declaração de Matrícula ou Vinculo</option>
@@ -124,30 +111,23 @@
                                <option value="reabertura">Reabertura de Matrícula</option>
                                <option value="trancamento">Trancamento de Matrícula</option>
                               </select></label>
-                          </td>
-                          <td></td>
-                          <td>
-                           <label> <textarea class="form-control" rows="5" name="obs" width="300px"></textarea> </label></td>
-                          </td>
-                        </tr>
-                      </tbody>
-                      <!-- ------------------------ ----------------------- ----------------- --------------------- -->
-                          <tr>
-                      <thead>
-                          <th scope="col"> Outros</th>
-                            <th scope=""> Anexo de arquivos</th>
-                            <th></th>
-                            <th></th>
-                          </tr> 
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <label> <textarea class="form-control" rows="3" name="outros"></textarea></label>
-                          <td> <label> <input type="file" class="form-control-file" name="file"></label></td>
-                        </tr>
-                      </tbody>
-                </table>
+                  </div>
+                  <div class="col">
+                    <label>Observações</label><br>
+                    <label><textarea class="form-control" rows="5" name="obs" width="300px"></textarea></label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label>Outros</label><br>
+                     <label> <textarea class="form-control" rows="3" name="outros"></textarea></label>
+                  </div>
+                  <div class="col">
+                    <label>Anexo</label><br>
+                    <label> <input type="file" class="form-control-file" name="file">
+                  </div>
+                </div>
                 <br><br>
                 <input type="submit" class="btn btn-lg btn-block" value="Enviar">
               </div>
